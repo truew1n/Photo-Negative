@@ -3,14 +3,12 @@ from tkinter import Tk, filedialog
 
 invert_color = lambda color: tuple([255-int(x) for x in color])
 
-
 filename = filedialog.askopenfilename(title="Open a file", initialdir='/')
 
 def autosave(filename):
     length = len(filename)
     last_slash = 0
     for x in range(length-1, 0, -1):
-        
         if filename[x] == "/":
             last_slash = x+1
             break
